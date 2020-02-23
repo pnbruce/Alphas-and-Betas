@@ -55,77 +55,77 @@ for c = 1:k
     scatter(dispCenters(c,1), dispCenters(c,2),400,string(colors(c)))
 end
 xlabel(col_headers(1)); ylabel(col_headers(2));xlim([1.5 5.5]); ylim([40 100]);title('Old Faithful Eruptions')
-pause(.5)
-
-for c = 1:k
-    d(c,:) = square_dist(ANorm,centers(c,:));
-end
-
-% id an array and each spot corrisponds to a data point and is assigned
-% to the value of the center that is closest to that data point. ds is
-% the distance between that data point and its nearest center.
-[ds, id] = min(d);
-
-for c = 1:k
-    hold on;
-    scatter(A(id==c,1),A(id==c,2),50,string(colors(c)))
-end
-xlabel(col_headers(1)); ylabel(col_headers(2));xlim([1.5 5.5]); ylim([40 100]);title('Old Faithful Eruptions')
-pause(.5)
-
-newCenters = centers;
-
-for i = 1:maxiter
-    
-    for c = 1:k
-        newCenters(c,:) = mean(ANorm(id==c,:));
-    end
-    
-    % If centers do not move end the clasification
-    if newCenters == centers
-        break
-    else
-        centers = newCenters;
-    end
-    
-    fprintf('[%d] iteration',i)
-    dispCenters = centers.* sigma + mu
-    
-    hold off;
-    
-    for c = 1:k
-        scatter(A(id==c,1),A(id==c,2),50,string(colors(c)))   
-        hold on;
-    end
-    xlabel(col_headers(1)); ylabel(col_headers(2));xlim([1.5 5.5]); ylim([40 100]);title('Old Faithful Eruptions')
-    for c = 1:k
-        hold on;
-        scatter(dispCenters(c,1), dispCenters(c,2),400,string(colors(c)))    
-    end
-    xlabel(col_headers(1)); ylabel(col_headers(2));xlim([1.5 5.5]); ylim([40 100]);title('Old Faithful Eruptions')
-    pause(.5)
-    
-    
-    for c = 1:k
-        d(c,:) = square_dist(ANorm,centers(c,:));
-    end
-
-    % id an array and each spot corrisponds to a data point and is assigned
-    % to the value of the center that is closest to that data point. ds is
-    % the distance between that data point and its nearest center.
-    [ds, id] = min(d);
-    
-    
-    hold off;
-    for c = 1:k
-        scatter(A(id==c,1),A(id==c,2),50,string(colors(c)))   
-        hold on;
-    end
-    xlabel(col_headers(1)); ylabel(col_headers(2));xlim([1.5 5.5]); ylim([40 100]);title('Old Faithful Eruptions')
-    for c = 1:k
-        hold on;
-        scatter(dispCenters(c,1), dispCenters(c,2),400,string(colors(c)))    
-    end
-    xlabel(col_headers(1)); ylabel(col_headers(2));xlim([1.5 5.5]); ylim([40 100]);title('Old Faithful Eruptions')
-    pause(.5)
-end
+% pause(.5)
+% 
+% for c = 1:k
+%     d(c,:) = square_dist(ANorm,centers(c,:));
+% end
+% 
+% % id an array and each spot corrisponds to a data point and is assigned
+% % to the value of the center that is closest to that data point. ds is
+% % the distance between that data point and its nearest center.
+% [ds, id] = min(d);
+% 
+% for c = 1:k
+%     hold on;
+%     scatter(A(id==c,1),A(id==c,2),50,string(colors(c)))
+% end
+% xlabel(col_headers(1)); ylabel(col_headers(2));xlim([1.5 5.5]); ylim([40 100]);title('Old Faithful Eruptions')
+% pause(.5)
+% 
+% newCenters = centers;
+% 
+% for i = 1:maxiter
+%     
+%     for c = 1:k
+%         newCenters(c,:) = mean(ANorm(id==c,:));
+%     end
+%     
+%     % If centers do not move end the clasification
+%     if newCenters == centers
+%         break
+%     else
+%         centers = newCenters;
+%     end
+%     
+%     fprintf('[%d] iteration',i)
+%     dispCenters = centers.* sigma + mu
+%     
+%     hold off;
+%     
+%     for c = 1:k
+%         scatter(A(id==c,1),A(id==c,2),50,string(colors(c)))   
+%         hold on;
+%     end
+%     xlabel(col_headers(1)); ylabel(col_headers(2));xlim([1.5 5.5]); ylim([40 100]);title('Old Faithful Eruptions')
+%     for c = 1:k
+%         hold on;
+%         scatter(dispCenters(c,1), dispCenters(c,2),400,string(colors(c)))    
+%     end
+%     xlabel(col_headers(1)); ylabel(col_headers(2));xlim([1.5 5.5]); ylim([40 100]);title('Old Faithful Eruptions')
+%     pause(.5)
+%     
+%     
+%     for c = 1:k
+%         d(c,:) = square_dist(ANorm,centers(c,:));
+%     end
+% 
+%     % id an array and each spot corrisponds to a data point and is assigned
+%     % to the value of the center that is closest to that data point. ds is
+%     % the distance between that data point and its nearest center.
+%     [ds, id] = min(d);
+%     
+%     
+%     hold off;
+%     for c = 1:k
+%         scatter(A(id==c,1),A(id==c,2),50,string(colors(c)))   
+%         hold on;
+%     end
+%     xlabel(col_headers(1)); ylabel(col_headers(2));xlim([1.5 5.5]); ylim([40 100]);title('Old Faithful Eruptions')
+%     for c = 1:k
+%         hold on;
+%         scatter(dispCenters(c,1), dispCenters(c,2),400,string(colors(c)))    
+%     end
+%     xlabel(col_headers(1)); ylabel(col_headers(2));xlim([1.5 5.5]); ylim([40 100]);title('Old Faithful Eruptions')
+%     pause(.5)
+% end
