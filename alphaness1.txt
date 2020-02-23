@@ -1,0 +1,16 @@
+Thomas "The Body" Sheehan	1
+Louie Shearon	0.894
+Swan	0.809
+Henry Bird	0.691
+Mike Burke	0.691
+Alex Budke	0.691
+Nando	0.691
+Patrick Bruce	0.587
+Ben	0.498
+Pison	0.467
+Bibby	0.467
+Brendan	0.431
+Calvin Thoma	0.423
+Zach Schroeder	0.295
+Quinn Schaper	0.295
+Dan Kies	0.295
